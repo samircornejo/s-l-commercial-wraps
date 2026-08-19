@@ -10,24 +10,32 @@ export default function ServiciosPage() {
     {
       id: '1',
       badge: lang === 'es' ? 'Servicio #1' : 'Service #1',
-      title: lang === 'es' ? 'Publicidad para Compañías' : 'Company Commercial Wraps',
-      desc: lang === 'es' ? 'Diseño e instalación de rotulado comercial para tu negocio.' : 'Commercial wrap design and installation for your business.',
+      title: lang === 'es' ? 'ROTULACIÓN DE FLOTAS' : 'Fleet Branding & Wraps',
+      desc: lang === 'es' ? 'Diseño e instalación de rotulado para flotas y vehículos comerciales.' : 'Design and installation of branding for fleets and commercial vehicles.',
       img: '/wrap-1.jpg',
       popular: lang === 'es' ? 'Más popular' : 'Most popular'
     },
     {
       id: '2',
       badge: lang === 'es' ? 'Servicio #2' : 'Service #2',
-      title: lang === 'es' ? 'Polarizados a Domicilio' : 'Mobile Window Tinting',
-      desc: lang === 'es' ? 'Instalación profesional directamente en tu ubicación.' : 'Professional tinting installed directly at your location.',
+      title: lang === 'es' ? 'POLARIZADO DE VENTANAS' : 'Window Tinting',
+      desc: lang === 'es' ? 'Polarizado profesional que reduce calor, protege de UV y da privacidad.' : 'Professional tinting that reduces heat, protects from UV and adds privacy.',
       img: '/polarizado-1.jpg',
     },
     {
       id: '3',
       badge: lang === 'es' ? 'Servicio #3' : 'Service #3',
-      title: lang === 'es' ? 'Cambio de Color (Wrap)' : 'Full Vehicle Wrap',
-      desc: lang === 'es' ? 'Transformación total con vinil automotriz de alta calidad.' : 'Complete vehicle makeover with premium automotive vinyl.',
+      title: lang === 'es' ? 'CAMBIO DE COLOR' : 'Full Vehicle Wraps',
+      desc: lang === 'es' ? 'Transformación total con vinil automotriz de alta calidad y acabados especiales.' : 'Complete vehicle transformation with high-quality vinyl and special finishes.',
       img: '/wrap-2.jpg',
+    }
+    ,
+    {
+      id: '4',
+      badge: lang === 'es' ? 'Servicio #4' : 'Service #4',
+      title: lang === 'es' ? 'LUCES Y DETALLES' : 'Lights & Detailing',
+      desc: lang === 'es' ? 'Mejoras en iluminación, detalles estéticos y personalizaciones finas para tu vehículo.' : 'Lighting upgrades, aesthetic details and fine customizations for your vehicle.',
+      img: '/detalles-1.jpg',
     }
   ];
 

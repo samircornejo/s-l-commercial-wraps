@@ -49,37 +49,80 @@ export default function Home() {
     {
       id: '1',
       badge: lang === 'es' ? 'Servicio #1' : 'Service #1',
-      title: lang === 'es' ? 'Publicidad para Compañías' : 'Company Commercial Wraps',
-      desc: lang === 'es' ? 'Diseño e instalación de rotulado comercial para tu negocio.' : 'Commercial wrap design and installation for your business.',
+      title: lang === 'es' ? 'ROTULACIÓN DE FLOTAS' : 'FLEET WRAPPING',
+      desc: lang === 'es' 
+        ? 'Convierte tu flota en publicidad móvil. Diseños personalizados, materiales de alta calidad e instalación profesional.' 
+        : 'Turn your fleet into mobile advertising. Custom designs, high-quality materials, and professional installation.',
       img: '/wrap-1.jpg',
-      popular: lang === 'es' ? 'Más popular' : 'Most popular'
+      popular: lang === 'es' ? 'Más popular' : 'Most popular',
+      iconSvg: (
+        <svg className="w-5 h-5 text-[#1C1C1C]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 7h-3V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM7 16.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM18 10.5V8.5h2.5l1.5 2V10.5H18z"/>
+        </svg>
+      )
     },
     {
       id: '2',
       badge: lang === 'es' ? 'Servicio #2' : 'Service #2',
-      title: lang === 'es' ? 'Polarizados a Domicilio' : 'Mobile Window Tinting',
-      desc: lang === 'es' ? 'Instalación profesional directamente en tu ubicación.' : 'Professional tinting installed directly at your location.',
+      title: lang === 'es' ? 'POLARIZADO DE VENTANAS' : 'WINDOW TINTING',
+      desc: lang === 'es' 
+        ? 'Película cerámica de máxima calidad que reduce el calor, protege tu piel y da privacidad. Apariencia elegante y durabilidad garantizada.' 
+        : 'Top quality ceramic film that reduces heat, protects your skin and provides privacy. Elegant appearance and guaranteed durability.',
       img: '/polarizado-1.jpg',
+      iconSvg: (
+        <svg className="w-5 h-5 text-[#1C1C1C]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1z"/>
+        </svg>
+      )
     },
     {
       id: '3',
       badge: lang === 'es' ? 'Servicio #3' : 'Service #3',
-      title: lang === 'es' ? 'Cambio de Color (Wrap)' : 'Full Vehicle Wrap',
-      desc: lang === 'es' ? 'Transformación total con vinil automotriz de alta calidad.' : 'Complete vehicle makeover with premium automotive vinyl.',
+      title: lang === 'es' ? 'CAMBIO DE COLOR' : 'COLOR CHANGE WRAP',
+      desc: lang === 'es' 
+        ? 'Renueva el look de tu auto con vinilos premium. Variedad de colores y acabados con protección superior.' 
+        : 'Refresh your car look with premium vinyls. Variety of colors and finishes with superior protection.',
       img: '/wrap-2.jpg',
+      iconSvg: (
+        <svg className="w-5 h-5 text-[#1C1C1C]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.21 19.57 10.56 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+        </svg>
+      )
+    },
+    {
+      id: '4',
+      badge: lang === 'es' ? 'Servicio #4' : 'Service #4',
+      title: lang === 'es' ? 'LUCES Y DETALLES' : 'LIGHTS & DETAILS',
+      desc: lang === 'es' 
+        ? 'Instalación de luces, detalles estéticos y acabados que marcan la diferencia. Estilo y funcionalidad en cada proyecto.' 
+        : 'Installation of lights, aesthetic details, and finishes that make a difference. Style and functionality in every project.',
+      img: '/wrap-5.jpg',
+      iconSvg: (
+        <svg className="w-5 h-5 text-[#1C1C1C]" fill="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5" />
+          <path d="M12 1c-6.08 0-11 4.92-11 11s4.92 11 11 11 11-4.92 11-11-4.92-11-11-11zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"/>
+        </svg>
+      )
     }
   ];
 
   return (
     <main className="min-h-screen bg-[#1C1C1C] text-white space-y-12 pb-12 font-sans">
       
-      {/* HERO SECTION */}
+      {/* HERO SECTION CON VIDEO DE FONDO */}
       <section className="relative w-full h-[85vh] flex items-center justify-center overflow-hidden border-b border-[#7F8C8D]/30">
-        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-[#1C1C1C]/80 to-black/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-[#1C1C1C]/75 to-black/60 z-10" />
 
         <div className="relative z-20 text-center px-6 max-w-4xl mx-auto space-y-5">
           <div className="inline-block bg-[#F1C40F] text-[#1C1C1C] text-xs md:text-sm font-black py-1 px-4 rounded-full shadow-lg font-[family-name:var(--font-montserrat)] uppercase tracking-wider">
@@ -123,7 +166,7 @@ export default function Home() {
           <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-black text-white">{t[lang].featuresTitle}</h2>
           <p className="text-[#7F8C8D] text-sm pb-4">{t[lang].subtitle}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
             {servicesList.map((s) => (
               <div key={s.id} className="bg-[#1C1C1C] rounded-2xl overflow-hidden border border-[#7F8C8D]/40 flex flex-col justify-between shadow-xl group hover:border-[#F1C40F] transition duration-300">
                 
@@ -141,9 +184,12 @@ export default function Home() {
                     {s.badge}
                   </div>
 
-                  {/* TÍTULO SOBRE LA IMAGEN */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="font-[family-name:var(--font-montserrat)] text-2xl font-black text-white leading-tight drop-shadow-md">
+                  {/* TÍTULO Y CAJA AMARILLA SOBRE LA IMAGEN */}
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#F1C40F] rounded-md flex items-center justify-center shrink-0 shadow-md">
+                      {s.iconSvg}
+                    </div>
+                    <h3 className="font-[family-name:var(--font-montserrat)] text-xl font-black text-white leading-tight drop-shadow-md uppercase">
                       {s.title}
                     </h3>
                   </div>

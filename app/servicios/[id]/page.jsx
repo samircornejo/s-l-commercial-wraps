@@ -6,9 +6,9 @@ import { useLanguage } from '../../components/LanguageProvider';
 
 const serviciosData = {
   '1': {
-    nombre: { es: 'Publicidad para Vehículos de Compañías', en: 'Commercial Vehicle Branding' },
-    slogan: { es: 'Transforma tu flota vehicular en la mejor herramienta de marketing itinerante.', en: 'Turn your fleet into the best mobile marketing tool.' },
-    descripcion: { es: 'Diseñamos, imprimimos e instalamos viniles publicitarios de alta calidad para empresas y negocios locales en New Jersey. Destaca tu marca en las calles, genera presencia y atrae nuevos clientes las 24 horas del día.', en: 'We design, print and install high-quality vehicle vinyl graphics for businesses in New Jersey. Stand out on the streets and attract customers around the clock.' },
+    nombre: { es: 'ROTULACIÓN DE FLOTAS', en: 'Fleet Branding & Wraps' },
+    slogan: { es: 'Transforma tu flota en una herramienta de marketing en movimiento.', en: 'Turn your fleet into a mobile marketing tool.' },
+    descripcion: { es: 'Diseñamos, imprimimos e instalamos rotulación de alta calidad para flotas y vehículos comerciales. Aumenta la visibilidad de tu marca mientras tus vehículos están en movimiento.', en: 'We design, print and install high-quality branding for fleets and commercial vehicles. Increase your brand visibility while your vehicles move.' },
     imgPrincipal: '/wrap-1.jpg',
     galeria: [
       { url: '/wrap-2.jpg', titulo: { es: 'Alineación e Instalación Trasera', en: 'Rear Alignment & Installation' } },
@@ -33,9 +33,9 @@ const serviciosData = {
     ]
   },
   '2': {
-    nombre: { es: 'Polarizados Profesional a Domicilio', en: 'Mobile Professional Window Tinting' },
-    slogan: { es: 'Privacidad, protección solar y confort sin moverte de tu casa u oficina.', en: 'Privacy, sun protection and comfort at your home or office.' },
-    descripcion: { es: 'Llevamos nuestro taller móvil directamente hasta tu ubicación en New Jersey. Aplicamos películas de polarizado de alta tecnología que reducen el calor interior, filtran los rayos UV dañinos y brindan un look elegante a tu auto.', en: 'We bring our mobile workshop to your location in New Jersey, applying high-tech tint films that reduce heat, block UV and give a sleek look.' },
+    nombre: { es: 'POLARIZADO DE VENTANAS', en: 'Window Tinting' },
+    slogan: { es: 'Privacidad, protección y confort al alcance de tu coche.', en: 'Privacy, protection and comfort within reach.' },
+    descripcion: { es: 'Aplicamos películas de polarizado profesionales que reducen el calor, bloquean rayos UV y aumentan la privacidad de tu vehículo.', en: 'We apply professional tint films that reduce heat, block UV rays and increase vehicle privacy.' },
     imgPrincipal: '/polarizado-1.jpg',
     galeria: [
       { url: '/polarizado-2.jpg', titulo: { es: 'Acabado en Sedan Blanco', en: 'Finish on White Sedan' } },
@@ -60,9 +60,9 @@ const serviciosData = {
     ]
   },
   '3': {
-    nombre: { es: 'Cambio de Color (Vehicle Wrap) & Acabados Especiales', en: 'Full Vehicle Wraps & Special Finishes' },
-    slogan: { es: 'Renueva la apariencia de tu auto con estilo único y personalizado.', en: 'Refresh your car with a unique, personalized style.' },
-    descripcion: { es: 'Cambia la estética de tu vehículo por completo o añade detalles exclusivos (como fibra de carbono, capós especiales o tonos mate) sin alterar la pintura original. Una alternativa moderna, reversible y protectora.', en: 'Completely change your vehicle’s look or add exclusive details (carbon fiber, special hoods, matte finishes) without affecting the original paint.' },
+    nombre: { es: 'CAMBIO DE COLOR', en: 'Full Vehicle Wraps' },
+    slogan: { es: 'Cambia el color y acabado de tu vehículo sin pintura.', en: 'Change color and finish without paint.' },
+    descripcion: { es: 'Transforma por completo tu vehículo con viniles de alta calidad y una amplia gama de colores y texturas.', en: 'Completely transform your vehicle with high-quality vinyl and a wide range of colors and textures.' },
     imgPrincipal: '/wrap-5.jpg',
     galeria: [
       { url: '/wrap-1.jpg', titulo: { es: 'Cobertura Completa de Carrocería', en: 'Full Body Coverage' } },
@@ -84,6 +84,32 @@ const serviciosData = {
     faqs: [
       { q: { es: '¿Cuánto tiempo toma realizar un Wrap completo?', en: 'How long does a full wrap take?' }, a: { es: 'El proceso toma habitualmente entre 3 y 5 días hábiles, asegurando cada detalle.', en: 'Typically 3 to 5 business days, depending on complexity.' } },
       { q: { es: '¿Cómo se lava un auto con vinil?', en: 'How do you wash a wrapped car?' }, a: { es: 'Se recomienda lavado a mano con shampoo neutro y evitar ceras abrasivas.', en: 'Hand wash with mild soap and avoid abrasive waxes.' } }
+    ]
+  }
+  ,
+  '4': {
+    nombre: { es: 'LUCES Y DETALLES', en: 'Lights & Details' },
+    slogan: { es: 'Mejora la estética y funcionalidad con iluminación y detalles personalizados.', en: 'Enhance aesthetics and functionality with custom lighting and details.' },
+    descripcion: { es: 'Instalación y personalización de luces, detalles estéticos y pequeños accesorios que realzan el aspecto de tu vehículo.', en: 'Installation and customization of lights, aesthetic details and small accessories to enhance your vehicle.' },
+    imgPrincipal: '/detalles-1.jpg',
+    galeria: [
+      { url: '/detalles-2.jpg', titulo: { es: 'Iluminación LED Moderna', en: 'Modern LED Lighting' } },
+      { url: '/detalles-3.jpg', titulo: { es: 'Detalles Cromados y Mate', en: 'Chrome & Matte Details' } },
+      { url: '/detalles-4.jpg', titulo: { es: 'Acabados Personalizados', en: 'Custom Finishes' } },
+    ],
+    beneficios: [
+      { es: 'Mejora estética inmediata y moderna.', en: 'Immediate modern aesthetic improvement.' },
+      { es: 'Aumenta visibilidad y seguridad con mejores luces.', en: 'Increases visibility and safety with improved lighting.' },
+      { es: 'Personalización acorde a tu estilo.', en: 'Customization according to your style.' }
+    ],
+    proceso: [
+      { paso: { es: '1. Asesoría de Estilo', en: '1. Style Consultation' }, desc: { es: 'Definimos el look y las opciones de iluminación y detalles.', en: 'We define the look and lighting/detailing options.' } },
+      { paso: { es: '2. Selección de Componentes', en: '2. Component Selection' }, desc: { es: 'Elegimos piezas y acabados que se adapten al vehículo.', en: 'We choose parts and finishes that fit the vehicle.' } },
+      { paso: { es: '3. Instalación Profesional', en: '3. Professional Installation' }, desc: { es: 'Instalamos con precisión y probamos funcionamiento.', en: 'We install precisely and test functionality.' } },
+      { paso: { es: '4. Ajustes y Entrega', en: '4. Tuning & Handover' }, desc: { es: 'Ajustes finales y entrega con demostración de uso.', en: 'Final adjustments and handover with usage demonstration.' } }
+    ],
+    faqs: [
+      { q: { es: '¿Se afecta la garantía del vehículo?', en: 'Does this affect vehicle warranty?' }, a: { es: 'En la mayoría de los casos no; usamos piezas e instalaciones profesionales que respetan las normas.', en: 'In most cases no; we use professional parts and installations that respect standards.' } }
     ]
   }
 };
