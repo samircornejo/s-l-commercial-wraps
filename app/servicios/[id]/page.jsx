@@ -96,87 +96,89 @@ export default function ServicioDetalle() {
   const servicio = serviciosData[id] || serviciosData['1'];
 
   return (
-    <main className="min-h-screen bg-slate-950 text-white p-6 md:p-12 max-w-5xl mx-auto space-y-10">
-      <Link href="/servicios" className="inline-flex items-center text-blue-400 text-sm hover:underline font-medium">
-        {lang === 'es' ? '← Volver a la lista de servicios' : '← Back to services'}
-      </Link>
+    <div className="w-full bg-[#1C1C1C] text-white font-sans min-h-screen">
+      <main className="max-w-5xl mx-auto p-6 md:p-12 space-y-10">
+        <Link href="/servicios" className="inline-flex items-center text-[#2E86C1] text-sm hover:text-[#F1C40F] font-medium transition">
+          {lang === 'es' ? '← Volver a la lista de servicios' : '← Back to services'}
+        </Link>
 
-      <section className="space-y-4 border-b border-slate-800 pb-8">
-        <div className="flex items-center gap-4">
-          <img src="/logo.jpg" alt="S&L Commercial Wraps Logo" className="w-16 h-16 rounded-xl object-contain bg-black border border-amber-500/50" />
-          <div>
-            <span className="bg-blue-600/20 text-blue-400 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/30">
-              {lang === 'es' ? `Servicio Especializado #${id}` : `Specialized Service #${id}`}
-            </span>
-            <h1 className="text-2xl md:text-4xl font-extrabold text-white pt-1">{servicio.nombre[lang]}</h1>
+        <section className="space-y-4 border-b border-[#7F8C8D]/30 pb-8">
+          <div className="flex items-center gap-4">
+            <img src="/logo.jpg" alt="S&L Commercial Wraps Logo" className="w-16 h-16 rounded-xl object-contain bg-[#1C1C1C] border border-[#F1C40F]/50" />
+            <div>
+              <span className="bg-[#2E86C1]/20 text-[#2E86C1] text-xs font-bold px-3 py-1 rounded-full border border-[#2E86C1]/30 font-[family-name:var(--font-montserrat)] uppercase">
+                {lang === 'es' ? `Servicio Especializado #${id}` : `Specialized Service #${id}`}
+              </span>
+              <h1 className="text-2xl md:text-4xl font-extrabold text-white pt-1 font-[family-name:var(--font-montserrat)]">{servicio.nombre[lang]}</h1>
+            </div>
           </div>
-        </div>
-        <p className="text-xl text-amber-400 font-medium">{servicio.slogan[lang]}</p>
-        <p className="text-slate-300 text-base md:text-lg leading-relaxed">{servicio.descripcion[lang]}</p>
-      </section>
+          <p className="text-xl text-[#F1C40F] font-medium">{servicio.slogan[lang]}</p>
+          <p className="text-[#7F8C8D] text-base md:text-lg leading-relaxed">{servicio.descripcion[lang]}</p>
+        </section>
 
-      <section className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800 h-56 sm:h-72 md:h-[450px]">
-        <img src={servicio.imgPrincipal} alt={servicio.nombre[lang]} className="w-full h-full object-cover" />
-      </section>
+        <section className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#7F8C8D]/40 h-56 sm:h-72 md:h-[450px] bg-black">
+          <img src={servicio.imgPrincipal} alt={servicio.nombre[lang]} className="w-full h-full object-cover" />
+        </section>
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">{lang === 'es' ? '¿Por qué elegir este servicio?' : 'Why choose this service?'}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {servicio.beneficios.map((b, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 p-4 rounded-xl flex items-start space-x-3">
-              <span className="text-amber-400 font-bold text-lg">✓</span>
-              <p className="text-slate-300 text-sm md:text-base">{b[lang]}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-bold text-white">{lang === 'es' ? 'Proceso de Trabajo Paso a Paso' : 'Step-by-step Process'}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {servicio.proceso.map((item, idx) => (
-            <div key={idx} className="bg-slate-900/60 border border-slate-800 p-6 rounded-xl space-y-2">
-              <h3 className="text-lg font-bold text-amber-400">{item.paso[lang]}</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">{item.desc[lang]}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">{lang === 'es' ? 'Galería de Trabajos Reales (S&L Commercial Wraps)' : 'Gallery of Real Work (S&L Commercial Wraps)'}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {servicio.galeria.map((item, idx) => (
-            <div key={idx} className="space-y-2">
-              <div className="rounded-xl overflow-hidden border border-slate-800 h-44 sm:h-52 bg-slate-900">
-                <img src={item.url} alt={item.titulo[lang]} className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold text-white font-[family-name:var(--font-montserrat)]">{lang === 'es' ? '¿Por qué elegir este servicio?' : 'Why choose this service?'}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {servicio.beneficios.map((b, idx) => (
+              <div key={idx} className="bg-[#1C1C1C] border border-[#7F8C8D]/40 p-4 rounded-xl flex items-start space-x-3 shadow-md">
+                <span className="text-[#F1C40F] font-bold text-lg">✓</span>
+                <p className="text-slate-200 text-sm md:text-base">{b[lang]}</p>
               </div>
-              <p className="text-xs text-center text-slate-400 font-medium">{item.titulo[lang]}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      {/* Preguntas Frecuentes (FAQ) */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">{lang === 'es' ? 'Preguntas Frecuentes' : 'Frequently Asked Questions'}</h2>
-        <div className="space-y-4">
-          {servicio.faqs.map((faq, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
-              <h3 className="font-bold text-white text-base">❓ {faq.q[lang]}</h3>
-              <p className="text-slate-400 text-sm">{faq.a[lang]}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold text-white font-[family-name:var(--font-montserrat)]">{lang === 'es' ? 'Proceso de Trabajo Paso a Paso' : 'Step-by-step Process'}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {servicio.proceso.map((item, idx) => (
+              <div key={idx} className="bg-[#1C1C1C] border border-[#7F8C8D]/40 p-6 rounded-xl space-y-2 shadow-md">
+                <h3 className="text-lg font-bold text-[#F1C40F] font-[family-name:var(--font-montserrat)]">{item.paso[lang]}</h3>
+                <p className="text-[#7F8C8D] text-sm leading-relaxed">{item.desc[lang]}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-      <section className="bg-slate-900 border border-amber-500/10 p-6 rounded-2xl text-center space-y-4">
-        <h2 className="text-2xl font-bold text-white">{lang === 'es' ? '¿Listo para transformar tu vehículo?' : 'Ready to transform your vehicle?'}</h2>
-        <div className="flex flex-wrap justify-center items-center gap-4 pt-2">
-          <a href="tel:9733326605" className="bg-amber-500 hover:bg-amber-600 text-black font-extrabold py-3 px-6 rounded-xl">📞 973-332-6605</a>
-          <a href="mailto:slcommercialwraps@gmail.com" className="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-xl">✉️ slcommercialwraps@gmail.com</a>
-        </div>
-      </section>
-    </main>
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold text-white font-[family-name:var(--font-montserrat)]">{lang === 'es' ? 'Galería de Trabajos Reales (S&L Commercial Wraps)' : 'Gallery of Real Work (S&L Commercial Wraps)'}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {servicio.galeria.map((item, idx) => (
+              <div key={idx} className="space-y-2">
+                <div className="rounded-xl overflow-hidden border border-[#7F8C8D]/40 h-44 sm:h-52 bg-black shadow-md">
+                  <img src={item.url} alt={item.titulo[lang]} className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+                </div>
+                <p className="text-xs text-center text-[#7F8C8D] font-medium">{item.titulo[lang]}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Preguntas Frecuentes (FAQ) */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold text-white font-[family-name:var(--font-montserrat)]">{lang === 'es' ? 'Preguntas Frecuentes' : 'Frequently Asked Questions'}</h2>
+          <div className="space-y-4">
+            {servicio.faqs.map((faq, idx) => (
+              <div key={idx} className="bg-[#1C1C1C] border border-[#7F8C8D]/40 p-5 rounded-xl space-y-2 shadow-md">
+                <h3 className="font-bold text-white text-base">❓ {faq.q[lang]}</h3>
+                <p className="text-[#7F8C8D] text-sm">{faq.a[lang]}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-[#1C1C1C] border border-[#F1C40F]/30 p-6 rounded-2xl text-center space-y-4 shadow-xl">
+          <h2 className="text-2xl font-bold text-white font-[family-name:var(--font-montserrat)]">{lang === 'es' ? '¿Listo para transformar tu vehículo?' : 'Ready to transform your vehicle?'}</h2>
+          <div className="flex flex-wrap justify-center items-center gap-4 pt-2">
+            <a href="tel:9733326605" className="bg-[#F1C40F] hover:bg-[#d4ac0d] text-[#1C1C1C] font-extrabold py-3 px-6 rounded-xl transition shadow-md uppercase text-sm tracking-wide">📞 973-332-6605</a>
+            <a href="mailto:slcommercialwraps@gmail.com" className="bg-[#2E86C1] hover:bg-[#21618C] text-white font-semibold py-3 px-6 rounded-xl transition shadow-md text-sm">✉️ slcommercialwraps@gmail.com</a>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
