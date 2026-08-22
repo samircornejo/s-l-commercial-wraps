@@ -87,14 +87,14 @@ const serviciosData = {
     ]
   },
   '4': {
-    nombre: { es: 'Luces y Detalles Personalizados', en: 'Custom Lights & Aesthetic Details' },
+    nombre: { es: 'Luces y Detalles Personalizados', en: 'Customized Lights and Details' },
     slogan: { es: 'Estilo, iluminación y acabados únicos que marcan la diferencia.', en: 'Style, lighting and unique finishes that set you apart.' },
     descripcion: { es: 'Instalación de luces, detalles estéticos y acabados que marcan la diferencia. Estilo y funcionalidad en cada proyecto.', en: 'Installation of lights, aesthetic details and finishes that make a difference. Style and functionality in every project.' },
-    imgPrincipal: '/polarizado-1.jpg',
+    imgPrincipal: '/wrap-5.jpg',
     galeria: [
-      { url: '/polarizado-3.jpg', titulo: { es: 'Detalles Estéticos y Faros', en: 'Aesthetic Details & Headlights' } },
-      { url: '/wrap-5.jpg', titulo: { es: 'Acabados de Carbono Forjado', en: 'Forged Carbon Finishes' } },
-      { url: '/wrap-2.jpg', titulo: { es: 'Personalización de Molduras', en: 'Trim Customization' } },
+      { url: '/wrap-8.jpg', titulo: { es: 'Detalles Estéticos y Faros', en: 'Aesthetic Details & Headlights' } },
+      { url: '/wrap-9.jpg', titulo: { es: 'Acabados de Carbono Forjado', en: 'Forged Carbon Finishes' } },
+      { url: '/wrap-10.jpg', titulo: { es: 'Personalización de Molduras', en: 'Trim Customization' } },
     ],
     beneficios: [
       { es: 'Iluminación de alto rendimiento y mejor visibilidad nocturna.', en: 'High-performance lighting and better night visibility.' },

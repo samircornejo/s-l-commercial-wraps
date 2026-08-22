@@ -1,5 +1,6 @@
 import Navbar from './components/navbar';
 import Footer from './components/foorters';
+import WhatsAppButton from './components/WhatsAppButton';
 import LanguageProvider from './components/LanguageProvider';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
 
-      <body className="bg-[#1C1C1C] text-slate-100 antialiased min-h-screen flex flex-col font-[family-name:var(--font-montserrat)]">
+      <body className="bg-[#1C1C1C] text-slate-100 antialiased min-h-screen flex flex-col font-[family-name:var(--font-montserrat)] relative">
         <LanguageProvider>
           <Navbar />
 
@@ -26,6 +27,8 @@ export default function RootLayout({ children }) {
           </main>
 
           <Footer />
+
+          <WhatsAppButton />
         </LanguageProvider>
       </body>
     </html>

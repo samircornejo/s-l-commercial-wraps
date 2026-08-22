@@ -53,7 +53,7 @@ export default function Home() {
       desc: lang === 'es' 
         ? 'Convierte tu flota en publicidad móvil. Diseños personalizados, materiales de alta calidad e instalación profesional.' 
         : 'Turn your fleet into mobile advertising. Custom designs, high-quality materials, and professional installation.',
-      img: '/wrap-1.jpg',
+      img: '/wrap-6.jpg',
       popular: lang === 'es' ? 'Más popular' : 'Most popular',
       iconSvg: (
         <svg className="w-5 h-5 text-[#1C1C1C]" fill="currentColor" viewBox="0 0 24 24">
@@ -82,7 +82,7 @@ export default function Home() {
       desc: lang === 'es' 
         ? 'Renueva el look de tu auto con vinilos premium. Variedad de colores y acabados con protección superior.' 
         : 'Refresh your car look with premium vinyls. Variety of colors and finishes with superior protection.',
-      img: '/wrap-2.jpg',
+      img: '/wrap-7.jpg',
       iconSvg: (
         <svg className="w-5 h-5 text-[#1C1C1C]" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.21 19.57 10.56 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
@@ -92,7 +92,7 @@ export default function Home() {
     {
       id: '4',
       badge: lang === 'es' ? 'Servicio #4' : 'Service #4',
-      title: lang === 'es' ? 'LUCES Y DETALLES' : 'LIGHTS & DETAILS',
+      title: lang === 'es' ? 'TINTADO DE FAROS Y DETALLES' : 'HEADLIGHT TINTING AND DETAILING',
       desc: lang === 'es' 
         ? 'Instalación de luces, detalles estéticos y acabados que marcan la diferencia. Estilo y funcionalidad en cada proyecto.' 
         : 'Installation of lights, aesthetic details, and finishes that make a difference. Style and functionality in every project.',
@@ -147,14 +147,22 @@ export default function Home() {
             {t[lang].intro}
           </p>
 
-          <div className="flex justify-center gap-4 pt-4">
-            <Link href="/servicios" className="bg-[#F1C40F] hover:bg-[#d4ac0d] text-[#1C1C1C] font-black px-8 py-3.5 rounded-xl transition shadow-lg hover:scale-105 font-[family-name:var(--font-montserrat)] uppercase text-sm tracking-wide">
-              {t[lang].explore}
-            </Link>
-            <Link href="/contacto" className="bg-[#2E86C1] hover:bg-[#21618C] text-white border border-[#2E86C1] px-8 py-3.5 rounded-xl font-bold transition backdrop-blur-sm hover:scale-105">
-              {t[lang].quote}
-            </Link>
-          </div>
+        <div className="flex justify-center gap-4 pt-4">
+          <Link
+            href="/servicios"
+            className="bg-[#F1C40F] hover:bg-[#d4ac0d] text-[#1C1C1C] font-black px-8 py-3.5 rounded-xl transition shadow-lg hover:scale-105 text-sm tracking-wide normal-case"
+          >
+            {t[lang].explore}
+          </Link>
+
+          <Link
+            href="/contacto"
+            className="bg-[#2E86C1] hover:bg-[#21618C] text-white border border-[#2E86C1] px-8 py-3.5 rounded-xl font-bold transition backdrop-blur-sm hover:scale-105"
+          >
+            {t[lang].quote}
+          </Link>
+        </div>
+
         </div>
       </section>
 

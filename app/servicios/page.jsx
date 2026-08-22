@@ -14,7 +14,7 @@ export default function ServiciosPage() {
       desc: lang === 'es' 
         ? 'Diseño e instalación de rotulado comercial para tu negocio.' 
         : 'Design and installation of commercial branding for your business.',
-      img: '/wrap-1.jpg',
+      img: '/wrap-6.jpg',
       popular: lang === 'es' ? 'MÁS POPULAR' : 'MOST POPULAR'
     },
     {
