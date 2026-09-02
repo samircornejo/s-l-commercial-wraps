@@ -1,10 +1,18 @@
 "use client";
 
 import React from 'react';
+import { useLanguage } from './LanguageProvider'; // 1. Importas el hook del idioma
 
 export default function WhatsAppButton() {
+  const { lang } = useLanguage(); // 2. Obtienes el idioma actual ('es' o 'en')
   const phoneNumber = "19733326605"; 
-  const message = encodeURIComponent("¡Hola! Me gustaría cotizar un servicio para mi vehículo.");
+
+  // 3. Define el mensaje dinámico según el idioma
+  const textMessage = lang === 'es'
+    ? "¡Hola! Me gustaría cotizar un servicio para mi vehículo."
+    : "Hello! I would like to get a quote for a service on my vehicle.";
+
+  const message = encodeURIComponent(textMessage);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (

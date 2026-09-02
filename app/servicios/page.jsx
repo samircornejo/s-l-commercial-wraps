@@ -43,6 +43,15 @@ export default function ServiciosPage() {
         ? 'Instalación de luces, detalles estéticos y acabados que marcan la diferencia.' 
         : 'Installation of lights, aesthetic details, and finishes that make a difference.',
       img: '/wrap-5.jpg'
+    },
+    {
+      id: '5',
+      badge: lang === 'es' ? 'Servicio #5' : 'Service #5',
+      title: lang === 'es' ? 'PUBLICIDAD PARA NEGOCIOS' : 'ADVERTISING FOR BUSINESSES',
+      desc: lang === 'es' 
+        ? 'Rotulación publicitaria estratégica en áreas clave (puertas, cristales o maletero).' 
+        : 'Targeted vehicle branding on strategic areas (doors, windows, or tailgate).',
+      img: '/wrap-11.jpg'
     }
   ];
 
@@ -61,8 +70,8 @@ export default function ServiciosPage() {
           </p>
         </div>
 
-        {/* Reemplazamos grid-cols-3 por grid-cols-2 en pantallas medianas o lg:grid-cols-4 para mostrar los 4 servicios */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Adaptamos la grilla para acomodar dinámicamente 5 tarjetas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {servicesList.map((s) => (
             <div key={s.id} className="bg-[#1C1C1C] rounded-2xl overflow-hidden border border-[#7F8C8D]/40 flex flex-col justify-between shadow-xl group hover:border-[#F1C40F] transition duration-300">
               

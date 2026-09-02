@@ -9,7 +9,7 @@ export default function Home() {
   const t = {
     es: {
       intro: 'Bienvenido a S&L Commercial Wraps. Explora nuestros servicios de personalización y rotulado vehicular.',
-      heroTag: 'Rotulados, wraps y polarizados profesionales en New Jersey',
+      heroTag: 'Gráficos para vehículos, letreros, pancartas, gráficos para paredes, publicidad exterior y polarizado de ventanas.',
       explore: 'Explorar servicios',
       quote: 'Pedir Cotización',
       featuresTitle: 'Nuestros Servicios Principales',
@@ -27,7 +27,7 @@ export default function Home() {
     },
     en: {
       intro: 'Welcome to S&L Commercial Wraps. Explore our vehicle customization and branding services.',
-      heroTag: 'Professional wraps, graphics and tinting in New Jersey',
+      heroTag: 'vehicle graphics, signs, banners, wall graphics, outdoor advertising and windows tinting.',
       explore: 'Explore services',
       quote: 'Request Quote',
       featuresTitle: 'Our Main Services',
@@ -103,6 +103,20 @@ export default function Home() {
           <path d="M12 1c-6.08 0-11 4.92-11 11s4.92 11 11 11 11-4.92 11-11-4.92-11-11-11zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"/>
         </svg>
       )
+    },
+    {
+      id: '5',
+      badge: lang === 'es' ? 'Servicio #5' : 'Service #5',
+      title: lang === 'es' ? 'PUBLICIDAD PARA NEGOCIOS' : 'PARTIAL COMMERCIAL WRAP',
+      desc: lang === 'es' 
+        ? 'Destaca logos, teléfonos y gráficos en áreas clave de tu vehículo. Opción económica y de alto impacto visual.' 
+        : 'Highlight logos, phone numbers, and graphics on key areas of your vehicle. Cost-effective with high visual impact.',
+      img: '/wrap-11.jpg',
+      iconSvg: (
+        <svg className="w-5 h-5 text-[#1C1C1C]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 12h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2zm0-16h14v14H7V5z"/>
+        </svg>
+      )
     }
   ];
 
@@ -147,21 +161,21 @@ export default function Home() {
             {t[lang].intro}
           </p>
 
-        <div className="flex justify-center gap-4 pt-4">
-          <Link
-            href="/servicios"
-            className="bg-[#F1C40F] hover:bg-[#d4ac0d] text-[#1C1C1C] font-black px-8 py-3.5 rounded-xl transition shadow-lg hover:scale-105 text-sm tracking-wide normal-case"
-          >
-            {t[lang].explore}
-          </Link>
+          <div className="flex justify-center gap-4 pt-4">
+            <Link
+              href="/servicios"
+              className="bg-[#F1C40F] hover:bg-[#d4ac0d] text-[#1C1C1C] font-black px-8 py-3.5 rounded-xl transition shadow-lg hover:scale-105 text-sm tracking-wide normal-case"
+            >
+              {t[lang].explore}
+            </Link>
 
-          <Link
-            href="/contacto"
-            className="bg-[#2E86C1] hover:bg-[#21618C] text-white border border-[#2E86C1] px-8 py-3.5 rounded-xl font-bold transition backdrop-blur-sm hover:scale-105"
-          >
-            {t[lang].quote}
-          </Link>
-        </div>
+            <Link
+              href="/contacto"
+              className="bg-[#2E86C1] hover:bg-[#21618C] text-white border border-[#2E86C1] px-8 py-3.5 rounded-xl font-bold transition backdrop-blur-sm hover:scale-105"
+            >
+              {t[lang].quote}
+            </Link>
+          </div>
 
         </div>
       </section>
@@ -174,7 +188,8 @@ export default function Home() {
           <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-black text-white">{t[lang].featuresTitle}</h2>
           <p className="text-[#7F8C8D] text-sm pb-4">{t[lang].subtitle}</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {/* Cambio a lg:grid-cols-3 para acomodar visualmente los 5 servicios */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesList.map((s) => (
               <div key={s.id} className="bg-[#1C1C1C] rounded-2xl overflow-hidden border border-[#7F8C8D]/40 flex flex-col justify-between shadow-xl group hover:border-[#F1C40F] transition duration-300">
                 
