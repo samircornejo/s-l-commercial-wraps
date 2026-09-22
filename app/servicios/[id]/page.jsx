@@ -113,31 +113,40 @@ const serviciosData = {
       { q: { es: '¿El vinil para faros reduce la iluminación?', en: 'Does headlight vinyl reduce light output?' }, a: { es: 'Utilizamos películas ópticas especializadas diseñadas para proteger sin perder visibilidad.', en: 'We use specialized optical films designed to protect without compromising light output.' } }
     ]
   },
-  '5': {
-    nombre: { es: 'Publicidad para negocios', en: 'Advertising for businesses' },
-    slogan: { es: 'Maximiza el impacto de tu marca con una inversión económica y focalizada.', en: 'Maximize brand impact with a cost-effective and targeted investment.' },
-    descripcion: { es: 'Colocación de vinil publicitario en áreas clave del vehículo como puertas, ventanas traseras o maletero. Una opción excelente para empresas que desean proyectar una imagen profesional sin cubrir todo el vehículo.', en: 'Targeted vehicle branding on strategic areas such as doors, rear windows, or tailgates. Perfect for businesses aiming for a professional look without full vehicle coverage.' },
+'5': {
+    nombre: { 
+      es: 'Gráficos Comerciales, Banners y Letreros para Locales', 
+      en: 'Commercial Graphics, Banners & Storefront Signs' 
+    },
+    slogan: { 
+      es: 'Destaca la presencia de tu negocio con impresiones publicitarias para locales, paredes y ventanas.', 
+      en: 'Enhance your business presence with high-quality vinyl graphics, wall murals, and storefront signage.' 
+    },
+    descripcion: { 
+      es: 'Diseñamos, imprimimos e instalamos vinilos publicitarios para ventanas de locales comerciales, murales decorativos para paredes, banners corporativos y letreros publicitarios de gran formato.', 
+      en: 'We design, print, and install storefront window vinyls, wall graphic murals, corporate banners, and large format commercial signage.' 
+    },
     imgPrincipal: '/wrap-13.jpg',
     galeria: [
-      { url: '/wrap-12.jpg', titulo: { es: 'Rotulación de Puertas y Paneles Lateral', en: 'Door & Side Panel Graphics' } },
-      { url: '/wrap-11.jpg', titulo: { es: 'Logos y Texto en Cristal Trasero', en: 'Rear Window Logos & Text' } },
-      { url: '/wrap-13.jpg', titulo: { es: 'Gráficos Parciales en Vans', en: 'Partial Van Graphics' } },
+      { url: '/wrap-11.jpg', titulo: { es: 'Rotulación de Ventanas Comerciales', en: 'Storefront Window Vinyl' } },
+      { url: '/wrap-12.jpg', titulo: { es: 'Banners y Letreros Publicitarios', en: 'Advertising Banners & Signs' } },
+      { url: '/wrap-14.jpg', titulo: { es: 'Gráficos Decorativos para Paredes', en: 'Wall Murals & Office Graphics' } },
     ],
     beneficios: [
-      { es: 'Menor costo en comparación con un rotulado completo.', en: 'Lower cost compared to a full wrap.' },
-      { es: 'Enfoque directo en la información de contacto y logotipo clave.', en: 'Direct focus on contact info and key logos.' },
-      { es: 'Instalación rápida para no detener la operación de tu negocio.', en: 'Fast installation to keep your business operating.' },
-      { es: 'Viniles de alta resistencia aptos para intemperie.', en: 'Weather-resistant high-performance vinyls.' }
+      { es: 'Mayor captación visual de clientes que transitan cerca de tu establecimiento.', en: 'Increased foot traffic attraction for your store location.' },
+      { es: 'Impresión de alta resolución resistente al sol, agua y decoloración.', en: 'High-resolution prints resistant to sunlight and weather.' },
+      { es: 'Diseños 100% personalizados adaptados a la imagen de tu empresa.', en: 'Fully customized designs matching your corporate branding.' },
+      { es: 'Instalación limpia y duradera en cristales, paredes o estructuras.', en: 'Clean and durable installation on windows, walls, or frames.' }
     ],
     proceso: [
-      { paso: { es: '1. Diseño y Escalado', en: '1. Design & Scaling' }, desc: { es: 'Dimensionamos el logotipo y los datos de contacto a la sección exacta del vehículo.', en: 'We scale logos and contact details to fit the vehicle area precisely.' } },
-      { paso: { es: '2. Impresión o Corte de Vinil', en: '2. Printing & Vinyl Cutting' }, desc: { es: 'Procesamos los gráficos en vinil impreso o vinil de corte de alta definición.', en: 'Graphics are output on high-definition printed or cut vinyl.' } },
-      { paso: { es: '3. Limpieza y Desengrasado', en: '3. Cleaning & Degreasing' }, desc: { es: 'Preparamos únicamente los paneles seleccionados con soluciones desengrasantes.', en: 'Selected panels are prepared using degreasing solutions.' } },
-      { paso: { es: '4. Aplicación y Alineación', en: '4. Application & Alignment' }, desc: { es: 'Colocamos y alineamos milimétricamente el gráfico asegurando un acabado limpio.', en: 'Graphics are placed and aligned with precision for a seamless look.' } }
+      { paso: { es: '1. Asesoría y Medición', en: '1. Measurement & Consultation' }, desc: { es: 'Tomamos medidas exactas de tus ventanas o paredes y diseñamos la propuesta gráfica.', en: 'We measure your physical space and align the graphic proposal.' } },
+      { paso: { es: '2. Impresión de Alta Definición', en: '2. High-Def Printing' }, desc: { es: 'Imprimimos en vinilos y sustratos especiales con capas de protección contra rayos UV.', en: 'We print artwork on premium materials with protective UV coating.' } },
+      { paso: { es: '3. Limpieza de Superficie', en: '3. Surface Preparation' }, desc: { es: 'Descontaminamos los cristales o muros para asegurar máxima adherencia.', en: 'We deep clean glass or wall areas to ensure maximum adhesion.' } },
+      { paso: { es: '4. Instalación Impecable', en: '4. Professional Installation' }, desc: { es: 'Montamos los gráficos o letreros sin burbujas ni pliegues con acabado profesional.', en: 'We mount the graphics smoothly without air bubbles or creases.' } }
     ],
     faqs: [
-      { q: { es: '¿Es posible combinar vinil impreso con vinil de corte?', en: 'Can printed vinyl be combined with cut vinyl?' }, a: { es: 'Sí, podemos combinar ambos materiales para lograr un diseño más dinámico y llamativo.', en: 'Yes, both materials can be combined for a dynamic and eye-catching design.' } },
-      { q: { es: '¿Cuánto tiempo toma la instalación?', en: 'How long does installation take?' }, a: { es: 'Por lo general se realiza en 1 solo día laboral.', en: 'It is typically completed in just 1 business day.' } }
+      { q: { es: '¿El vinilo para ventanas impide la entrada de luz natural?', en: 'Does window vinyl block natural light?' }, a: { es: 'Contamos con vinilo microperforado que permite la entrada de luz y ver hacia el exterior, exhibiendo tu publicidad por fuera.', en: 'We offer perforated window film that lets light in and allows outside visibility while displaying full graphics outside.' } },
+      { q: { es: '¿Instalan letreros y banners a domicilio?', en: 'Do you install storefront signs and banners on site?' }, a: { es: 'Sí, realizamos la toma de medidas, entrega e instalación directamente en tu local comercial.', en: 'Yes, we handle site visits, delivery, and installation at your commercial location.' } }
     ]
   }
 };

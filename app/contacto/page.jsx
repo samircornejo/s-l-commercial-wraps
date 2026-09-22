@@ -5,14 +5,14 @@ import { useLanguage } from '../components/LanguageProvider';
 
 export default function ContactoPage() {
   const { lang } = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [formData, setFormData] = useState({
-    nombre: '',
+    name: '',
     email: '',
-    telefono: '',
-    servicio: '',
-    detalles: '',
-    archivos: []
+    phone: '',
+    service: '',
+    message: ''
   });
 
   const handleInputChange = (e) => {
@@ -20,30 +20,61 @@ export default function ContactoPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (e) => {
-    if (e.target.files) {
-      setFormData((prev) => ({
-        ...prev,
-        archivos: Array.from(e.target.files)
-      }));
-    }
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Datos enviados:", formData);
-    alert(
-      lang === 'es'
-        ? "¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto."
-        : "Thank you for your request! We will get back to you shortly."
-    );
+    setIsSubmitting(true);
+
+    const dataToSend = new FormData();
+
+    // Configuración obligatoria de Web3Forms
+    dataToSend.append("access_key", "ea3adf6a-7f85-4a77-803b-81267023894a");
+    dataToSend.append("subject", `Nueva Cotización Web de: ${formData.name}`);
+    dataToSend.append("botcheck", ""); // Campo oculto anti-spam
+
+    // Campos estructurados estándar para que Web3Forms los ordene bien en el panel
+    dataToSend.append("name", formData.name);
+    dataToSend.append("email", formData.email);
+    dataToSend.append("phone", `+1 ${formData.phone}`);
+    dataToSend.append("service", formData.service);
+    dataToSend.append("message", formData.message);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: dataToSend
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert(
+          lang === 'es'
+            ? "¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto."
+            : "Thank you for your request! We will get back to you shortly."
+        );
+        
+        // Limpiar formulario
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        alert(result.message || (lang === 'es' ? "Hubo un error al enviar el mensaje." : "There was an error sending the message."));
+      }
+    } catch (error) {
+      alert(lang === 'es' ? "Error de conexión. Inténtalo de nuevo." : "Connection error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <main className="min-h-screen bg-[#1C1C1C] text-white py-12 px-4 sm:px-6 font-sans flex justify-center items-center">
       <div className="w-full max-w-xl bg-[#111111] border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
         
-        {/* Encabezado */}
         <div className="text-center space-y-2">
           <h1 className="text-2xl sm:text-3xl font-black tracking-wide text-white font-[family-name:var(--font-montserrat)] uppercase">
             {lang === 'es' ? 'Obtén una ' : 'Get a '}
@@ -67,9 +98,9 @@ export default function ContactoPage() {
             </label>
             <input
               type="text"
-              name="nombre"
+              name="name"
               required
-              value={formData.nombre}
+              value={formData.name}
               onChange={handleInputChange}
               placeholder={lang === 'es' ? "Ej. Juan Pérez" : "Ex. John Doe"}
               className="w-full bg-[#1C1C1C] border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#F1C40F] transition"
@@ -101,9 +132,9 @@ export default function ContactoPage() {
               <span className="text-sm mr-2">🇺🇸 +1</span>
               <input
                 type="tel"
-                name="telefono"
+                name="phone"
                 required
-                value={formData.telefono}
+                value={formData.phone}
                 onChange={handleInputChange}
                 placeholder="201-555-0123"
                 className="w-full bg-transparent py-2 text-sm text-white focus:outline-none"
@@ -117,31 +148,31 @@ export default function ContactoPage() {
               {lang === 'es' ? 'Servicio de Interés' : 'Service of Interest'} <span className="text-red-500">*</span>
             </label>
             <select
-              name="servicio"
+              name="service"
               required
-              value={formData.servicio}
+              value={formData.service}
               onChange={handleInputChange}
               className="w-full bg-[#1C1C1C] border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#F1C40F] transition cursor-pointer"
             >
               <option value="" disabled>
                 {lang === 'es' ? 'Seleccionar un servicio' : 'Select a service'}
               </option>
-              <option value="rotulacion-flotas">
+              <option value="Rotulación de Flotas">
                 {lang === 'es' ? '1. Rotulación de Flotas' : '1. Fleet Wrapping'}
               </option>
-              <option value="envoltura-comercial-completa">
+              <option value="Envoltura Comercial Completa">
                 {lang === 'es' ? '2. Envoltura Comercial Completa' : '2. Full Commercial Wrap'}
               </option>
-              <option value="envoltura-comercial-parcial">
+              <option value="Envoltura Comercial Parcial">
                 {lang === 'es' ? '3. Envoltura Comercial Parcial' : '3. Partial Commercial Wrap'}
               </option>
-              <option value="polarizado-ventanas">
+              <option value="Polarizado de Ventanas">
                 {lang === 'es' ? '4. Polarizado de Ventanas' : '4. Window Tinting'}
               </option>
-              <option value="cambio-color">
+              <option value="Cambio de Color">
                 {lang === 'es' ? '5. Cambio de Color' : '5. Color Change Wrap'}
               </option>
-              <option value="tintado-faros-detalles">
+              <option value="Tintado de Faros y Detalles">
                 {lang === 'es' ? '6. Tintado de Faros y Detalles' : '6. Light Tinting & Details'}
               </option>
             </select>
@@ -153,10 +184,10 @@ export default function ContactoPage() {
               {lang === 'es' ? 'Detalles del Proyecto' : 'Project Details'} <span className="text-red-500">*</span>
             </label>
             <textarea
-              name="detalles"
+              name="message"
               rows={4}
               required
-              value={formData.detalles}
+              value={formData.message}
               onChange={handleInputChange}
               placeholder={
                 lang === 'es'
@@ -167,52 +198,16 @@ export default function ContactoPage() {
             />
           </div>
 
-          {/* Fotos del Vehículo */}
-          <div className="space-y-2">
-            <label className="block text-xs font-bold text-zinc-300 uppercase tracking-wider">
-              {lang === 'es' ? 'Fotos de tu Vehículo' : 'Vehicle Photos'}
-            </label>
-            <p className="text-xs text-zinc-400">
-              {lang === 'es' 
-                ? 'Puedes seleccionar varias fotos de tu vehículo.' 
-                : 'You can select multiple photos of your vehicle.'}
-            </p>
-            
-            <div className="relative border-2 border-dashed border-zinc-700 hover:border-[#F1C40F] rounded-2xl p-6 text-center bg-[#1C1C1C]/50 transition cursor-pointer group">
-              <input
-                type="file"
-                multiple
-                accept="image/*"
-                onChange={handleFileChange}
-                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-              />
-              <div className="flex flex-col items-center space-y-2">
-                <svg className="w-8 h-8 text-zinc-400 group-hover:text-[#F1C40F] transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                </svg>
-                <p className="text-xs text-zinc-300">
-                  {lang === 'es' ? (
-                    <>Arrastrar y soltar (o) <span className="text-[#2E86C1] underline font-semibold">cambiar archivos</span></>
-                  ) : (
-                    <>Drag and drop (or) <span className="text-[#2E86C1] underline font-semibold">browse files</span></>
-                  )}
-                </p>
-                {formData.archivos.length > 0 && (
-                  <p className="text-xs text-[#F1C40F] font-bold pt-1">
-                    {formData.archivos.length} {lang === 'es' ? 'archivo(s) seleccionado(s)' : 'file(s) selected'}
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
-
           {/* Botón de Enviar */}
           <button
             type="submit"
-            className="w-full bg-[#F1C40F] hover:bg-[#d4ac0d] text-[#111111] font-black text-sm uppercase tracking-wider py-3.5 rounded-xl transition shadow-lg mt-4"
+            disabled={isSubmitting}
+            className="w-full bg-[#F1C40F] hover:bg-[#d4ac0d] text-[#111111] font-black text-sm uppercase tracking-wider py-3.5 rounded-xl transition shadow-lg mt-4 cursor-pointer disabled:opacity-50"
           >
-            {lang === 'es' ? 'Enviar' : 'Submit'}
-          </button>
+            {isSubmitting 
+              ? (lang === 'es' ? 'Enviando...' : 'Sending...') 
+              : (lang === 'es' ? 'Enviar' : 'Submit')}
+  w          </button>
         </form>
       </div>
     </main>

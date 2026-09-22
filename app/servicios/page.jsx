@@ -47,11 +47,11 @@ export default function ServiciosPage() {
     {
       id: '5',
       badge: lang === 'es' ? 'Servicio #5' : 'Service #5',
-      title: lang === 'es' ? 'PUBLICIDAD PARA NEGOCIOS' : 'ADVERTISING FOR BUSINESSES',
+      title: lang === 'es' ? 'Gráficos Comerciales y Letreros' : 'Commercial Graphics & Signs',
       desc: lang === 'es' 
-        ? 'Rotulación publicitaria estratégica en áreas clave (puertas, cristales o maletero).' 
-        : 'Targeted vehicle branding on strategic areas (doors, windows, or tailgate).',
-      img: '/wrap-11.jpg'
+        ? 'Banners, gráficos para paredes, letreros publicitarios y rotulación de ventanas para locales comerciales.' 
+        : 'Banners, wall graphics, commercial signs, and storefront window vinyls.',
+      img: '/wrap-13.jpg'
     }
   ];
 
@@ -70,10 +70,15 @@ export default function ServiciosPage() {
           </p>
         </div>
 
-        {/* Adaptamos la grilla para acomodar dinámicamente 5 tarjetas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {servicesList.map((s) => (
-            <div key={s.id} className="bg-[#1C1C1C] rounded-2xl overflow-hidden border border-[#7F8C8D]/40 flex flex-col justify-between shadow-xl group hover:border-[#F1C40F] transition duration-300">
+        {/* Grilla adaptada: 3 columnas arriba y las 2 de abajo se centran o acomodan automáticamente */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+          {servicesList.map((s, index) => (
+            <div 
+              key={s.id} 
+              className={`bg-[#1C1C1C] rounded-2xl overflow-hidden border border-[#7F8C8D]/40 flex flex-col justify-between shadow-xl group hover:border-[#F1C40F] transition duration-300 ${
+                index >= 3 ? 'lg:col-span-1' : ''
+              }`}
+            >
               
               <div className="relative h-52 w-full overflow-hidden bg-black">
                 <img 
