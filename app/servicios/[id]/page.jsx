@@ -28,7 +28,7 @@ const serviciosData = {
       { paso: { es: '4. Instalación Profesional', en: '4. Professional Installation' }, desc: { es: 'Aplicación técnica con sellado de bordes para prevenir filtraciones de aire o humedad.', en: 'Technical application with edge sealing to prevent air or moisture ingress.' } }
     ],
     faqs: [
-      { q: { es: '¿Cuánto tiempo dura el vinil publicitario?', en: 'How long does the vinyl last?' }, a: { es: 'Con los cuidados adecuados, nuestros viniles tienen una vida útil de 3 a 5 años.', en: 'With proper care, our vinyls last typically 3 to 5 years.' } },
+      { q: { es: '¿Cuánto tiempo dura el vinil publicitario?', en: 'How long does the vinyl last?' }, a: { es: 'Con los cuidados adecuados, nuestros viniles tienen una vida útil de 7 a 10 años.', en: 'With proper care, our vinyls last typically 7 to 10 years.' } },
       { q: { es: '¿Daña la pintura original al retirarlo?', en: 'Does it damage the original paint when removed?' }, a: { es: 'Para nada. Utilizamos adhesivos removibles de grado automotriz que protegen la pintura base.', en: 'No. We use automotive-grade removable adhesives that protect the base paint.' } }
     ]
   },

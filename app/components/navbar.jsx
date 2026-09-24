@@ -12,7 +12,7 @@ export default function Navbar() {
     <header className="w-full sticky top-0 z-50 bg-[#1C1C1C] border-b border-[#7F8C8D]/20 shadow-lg">
       {/* Banner Superior Promocional */}
       <div className="bg-[#F1C40F] text-[#1C1C1C] text-[#1C1C1C] text-xs font-bold py-1.5 px-4 text-center tracking-wide uppercase">
-        📍 Servicios disponibles en New Jersey
+        {lang === 'es' ? 'Servicios disponibles en New Jersey' : 'Services available in New Jersey'}
       </div>
 
       {/* Navegación Principal */}

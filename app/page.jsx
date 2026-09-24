@@ -97,8 +97,8 @@ export default function Home() {
       badge: lang === 'es' ? 'Servicio #5' : 'Service #5',
       title: lang === 'es' ? 'PUBLICIDAD PARA NEGOCIOS' : 'PARTIAL COMMERCIAL WRAP',
       desc: lang === 'es' 
-        ? 'Destaca logos, teléfonos y gráficos en áreas clave de tu vehículo. Opción económica y de alto impacto visual.' 
-        : 'Highlight logos, phone numbers, and graphics on key areas of your vehicle. Cost-effective with high visual impact.',
+        ? 'Destaca logos, teléfonos y gráficos en áreas clave de tu negocio. Opción económica y de alto impacto visual.' 
+        : 'Highlight logos, phone numbers, and graphics on key areas of your business. Cost-effective with high visual impact.',
       img: '/wrap-11.jpg',
       iconSvg: (
         <svg className="w-5 h-5 text-[#1C1C1C]" fill="currentColor" viewBox="0 0 24 24">

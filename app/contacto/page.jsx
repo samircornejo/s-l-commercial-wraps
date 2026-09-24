@@ -6,6 +6,7 @@ import { useLanguage } from '../components/LanguageProvider';
 export default function ContactoPage() {
   const { lang } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -17,13 +18,13 @@ export default function ContactoPage() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    setIsSubmitted(false);
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     const dataToSend = new FormData();
 
     // Configuración obligatoria de Web3Forms
@@ -47,13 +48,7 @@ export default function ContactoPage() {
       const result = await response.json();
 
       if (result.success) {
-        alert(
-          lang === 'es'
-            ? "¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto."
-            : "Thank you for your request! We will get back to you shortly."
-        );
-        
-        // Limpiar formulario
+        setIsSubmitted(true);
         setFormData({
           name: '',
           email: '',
@@ -62,10 +57,10 @@ export default function ContactoPage() {
           message: ''
         });
       } else {
-        alert(result.message || (lang === 'es' ? "Hubo un error al enviar el mensaje." : "There was an error sending the message."));
+        setIsSubmitted(false);
       }
     } catch (error) {
-      alert(lang === 'es' ? "Error de conexión. Inténtalo de nuevo." : "Connection error. Please try again.");
+      setIsSubmitted(false);
     } finally {
       setIsSubmitting(false);
     }
@@ -201,13 +196,15 @@ export default function ContactoPage() {
           {/* Botón de Enviar */}
           <button
             type="submit"
-            disabled={isSubmitting}
+            disabled={isSubmitting || isSubmitted}
             className="w-full bg-[#F1C40F] hover:bg-[#d4ac0d] text-[#111111] font-black text-sm uppercase tracking-wider py-3.5 rounded-xl transition shadow-lg mt-4 cursor-pointer disabled:opacity-50"
           >
-            {isSubmitting 
-              ? (lang === 'es' ? 'Enviando...' : 'Sending...') 
-              : (lang === 'es' ? 'Enviar' : 'Submit')}
-  w          </button>
+            {isSubmitted
+              ? (lang === 'es' ? 'Enviado' : 'Sent')
+              : isSubmitting
+                ? (lang === 'es' ? 'Enviando...' : 'Sending...')
+                : (lang === 'es' ? 'Enviar' : 'Submit')}
+          </button>
         </form>
       </div>
     </main>
