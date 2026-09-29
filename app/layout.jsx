@@ -11,8 +11,85 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: 'S&L Commercial Wraps',
-  description: 'Vehicle customization, commercial wraps, and window tinting services in New Jersey.',
+  metadataBase: new URL('https://slcommercialwraps.vercel.app'),
+  title: {
+    default: 'Commercial Wraps, Window Tinting & Vehicle Graphics in New Jersey | S&L Commercial Wraps',
+    template: '%s | S&L Commercial Wraps',
+  },
+  category: 'business',
+  classification: 'Business Services',
+  description:
+    'S&L Commercial Wraps specializes in commercial vehicle wraps, fleet graphics, storefront signs, and window tinting in New Jersey. Services in English and Spanish for local businesses.',
+  keywords: [
+    'commercial wraps New Jersey',
+    'vehicle wraps New Jersey',
+    'fleet graphics New Jersey',
+    'window tinting New Jersey',
+    'car wrap New Jersey',
+    'vinyl graphics New Jersey',
+    'rotulación comercial New Jersey',
+    'wrap automotriz New Jersey',
+    'polarizado de ventanas New Jersey',
+    'gráficos para negocios New Jersey',
+    'S&L Commercial Wraps',
+    'car wraps New Jersey',
+    'commercial vehicle branding New Jersey',
+    'storefront signs New Jersey',
+  ],
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': 'https://slcommercialwraps.vercel.app',
+      'es-US': 'https://slcommercialwraps.vercel.app',
+    },
+  },
+  applicationName: 'S&L Commercial Wraps',
+  authors: [{ name: 'S&L Commercial Wraps' }],
+  creator: 'S&L Commercial Wraps',
+  publisher: 'S&L Commercial Wraps',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'SaQwE3csDP3rOlciZXXXIIqnGhfXggYfY35f7AfGUe8',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://slcommercialwraps.vercel.app',
+    title: 'S&L Commercial Wraps | New Jersey Vehicle Wraps and Window Tinting',
+    description:
+      'Commercial wraps, vinyl graphics, fleet branding, and window tinting services in New Jersey. Bilingual service for businesses and vehicle owners.',
+    siteName: 'S&L Commercial Wraps',
+    images: [
+      {
+        url: '/logo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'S&L Commercial Wraps logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'S&L Commercial Wraps | New Jersey Wraps & Tinting',
+    description:
+      'Commercial vehicle wraps, window tinting, fleet graphics, and storefront branding in New Jersey.',
+    images: ['/logo.jpg'],
+  },
+  icons: {
+    icon: '/logo.jpg',
+    shortcut: '/logo.jpg',
+    apple: '/logo.jpg',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -23,6 +100,8 @@ export default function RootLayout({ children }) {
     <html lang="es" className={montserrat.variable}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1C1C1C" />
+        <meta name="format-detection" content="telephone=yes" />
       </head>
 
       <body className="bg-[#1C1C1C] text-slate-100 antialiased min-h-screen flex flex-col font-[family-name:var(--font-montserrat)] relative">
@@ -42,7 +121,7 @@ export default function RootLayout({ children }) {
             <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-400 px-4">
               {/* Instagram */}
               <a 
-                href="https://www.instagram.com/slcommercialwraps/" 
+                href="https://www.instagram.com/slcommercialwraps?stkn=ZzdwMGhpeTVlNXlp" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-[#F1C40F] transition-colors"
@@ -55,7 +134,7 @@ export default function RootLayout({ children }) {
 
               {/* Facebook */}
               <a 
-                href="https://www.facebook.com/slcommercialwraps/" 
+                href="https://www.facebook.com/share/19XpFCoNv2/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-[#2E86C1] transition-colors"
@@ -64,6 +143,19 @@ export default function RootLayout({ children }) {
                   <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/>
                 </svg>
                 <span>Facebook</span>
+              </a>
+
+              {/* TikTok */}
+              <a
+                href="https://www.tiktok.com/@sl.commercial.wraps"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-white transition-colors"
+              >
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.41V2h-3.97v13.67a2.896 2.896 0 0 1-2.9 2.9 2.9 2.9 0 1 1 2.9-2.9c0-.25-.03-.5-.09-.74V10.9a6.87 6.87 0 1 0 4.06 6.27V10.2a8.73 8.73 0 0 0 5.1 1.64V7.88a4.83 4.83 0 0 1-1.33-.194z" />
+                </svg>
+                <span>TikTok</span>
               </a>
 
               {/* Correo - Abre Gmail directamente en la Web */}
