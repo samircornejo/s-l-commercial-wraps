@@ -144,7 +144,7 @@ export default function HomePageClient() {
     name: 'S&L Commercial Wraps',
     description:
       'Specialists in commercial vehicle wraps, fleet graphics, storefront signage, and window tinting in New Jersey.',
-    url: 'https://slcommercialwraps.vercel.app',
+    url: 'https://www.slcommercialwraps.com',
     telephone: '+1-973-332-6605',
     email: 'slcommercialwraps@gmail.com',
     areaServed: ['New Jersey', 'NJ', 'United States'],

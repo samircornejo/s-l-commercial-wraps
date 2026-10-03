@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://slcommercialwraps.vercel.app/sitemap.xml',
+    sitemap: 'https://www.slcommercialwraps.com/sitemap.xml',
   };
 }

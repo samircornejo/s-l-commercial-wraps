@@ -22,7 +22,7 @@ export default function ContactoPageClient() {
     name: 'Contacto S&L Commercial Wraps',
     description:
       'Solicita una cotización para rotulación comercial, wraps automotrices, polarizado de ventanas y servicios de gráfica para negocios.',
-    url: 'https://slcommercialwraps.vercel.app/contacto',
+    url: 'https://www.slcommercialwraps.com/contacto',
     areaServed: 'New Jersey',
     contactPoint: {
       '@type': 'ContactPoint',

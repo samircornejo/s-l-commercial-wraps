@@ -91,7 +91,7 @@ export default function ServiciosPageClient() {
       '@type': 'ListItem',
       position: index + 1,
       name: service.title,
-      url: `https://slcommercialwraps.vercel.app/servicios/${service.id}`,
+      url: `https://www.slcommercialwraps.com/servicios/${service.id}`,
     })),
   };
 

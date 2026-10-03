@@ -39,7 +39,7 @@ const serviciosData = {
     galeria: [
       { url: '/polarizado-2.jpg', titulo: { es: 'Acabado en Sedan Blanco', en: 'Finish on White Sedan' } },
       { url: '/polarizado-3.jpg', titulo: { es: 'Vista Trasera / Privacidad 100%', en: 'Rear View / 100% Privacy' } },
-      { url: '/polarizado-4.jpg', titulo: { es: 'Protección Solar Lateral', en: 'Side Solar Protection' } },
+      { url: '/polarizado-4.jpg.jpeg', titulo: { es: 'Protección Solar Lateral', en: 'Side Solar Protection' } },
     ],
     beneficios: [
       { es: 'Reducción de hasta un 99% de rayos ultravioleta (UV).', en: 'Up to 99% UV reduction.' },
@@ -64,9 +64,9 @@ const serviciosData = {
     descripcion: { es: 'Cambia la estética de tu vehículo por completo o añade detalles exclusivos (como fibra de carbono, capós especiales o tonos mate) sin alterar la pintura original. Una alternativa moderna, reversible y protectora.', en: 'Completely change your vehicle’s look or add exclusive details (carbon fiber, special hoods, matte finishes) without affecting the original paint.' },
     imgPrincipal: '/wrap-5.jpg',
     galeria: [
-      { url: '/wrap-1.jpg', titulo: { es: 'Cobertura Completa de Carrocería', en: 'Full Body Coverage' } },
-      { url: '/wrap-3.jpg', titulo: { es: 'Ajuste Técnico en Bordes', en: 'Edge Technical Adjustment' } },
-      { url: '/wrap-5.jpg', titulo: { es: 'Detalle Especial Carbono Forjado', en: 'Forged Carbon Detail' } },
+      { url: '/cambio-color-1.jpeg', titulo: { es: 'Cobertura Completa de Carrocería', en: 'Full Body Coverage' } },
+      { url: '/cambio-color-2.jpeg', titulo: { es: 'Ajuste Técnico en Bordes', en: 'Edge Technical Adjustment' } },
+      { url: '/cambio-color-3.jpeg', titulo: { es: 'Detalle Especial Carbono Forjado', en: 'Forged Carbon Detail' } },
     ],
     beneficios: [
       { es: 'Protección integral de la pintura de fábrica contra rayos UV y pequeños micro-rayones.', en: 'Full protection of factory paint from UV and minor scratches.' },
